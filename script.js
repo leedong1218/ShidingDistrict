@@ -2,10 +2,10 @@ const templateName = document.body.getAttribute('data-template');
 
 const lotsMapping = {
     '大吉': `images/${templateName}/daikichi.png`,
-    '中吉': `images/${templateName}/chukichi.png`,
-    '小吉': `images/${templateName}/shokichi.png`,
+    '上上': `images/${templateName}/chukichi.png`,
+    '上吉': `images/${templateName}/shokichi.png`,
     '吉': `images/${templateName}/kichi.png`,
-    '末吉': `images/${templateName}/suekichi.png`,
+    '中平': `images/${templateName}/suekichi.png`,
     '平': `images/${templateName}/heikichi.png`
 };
 
@@ -73,11 +73,10 @@ document.querySelector('.content_img').addEventListener('click', function() {
         resultImage.setAttribute('data-aos', 'fade-down');
         result_msgbox.appendChild(resultImage);
 
-        result_msgbox.innerHTML += '<button id="result-msgbox-close" class="msgbox-close">關閉</button>';
+        result_msgbox.innerHTML += '<button id="result-msgbox-close" class="msgbox-close">求取平安符</button>';
 
         document.getElementById('result-msgbox-close').addEventListener('click', function() {
-            overlay.style.display = 'none';
-            result_msgbox.style.display = 'none';
+            window.location.href = 'https://shelly9457.github.io/ShiDing/Talisman/index.html';
         });
 
         AOS.init();
